@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cães Adotados</title>
+</head>
+<body>
+    <h1>Cães Adotados</h1>
+
+<?php
+$servidor = "localhost"; // Endereço do servidor MySQL
+$usuario = "root";       // Nome de usuário do MySQL
+$senha = "";             // Senha do MySQL
+$banco = "adocao_luan";    // Nome do banco de dados
+
+$conn = new mysqli($servidor, $usuario, $senha, $banco); // Cria uma nova conexão com o banco de dados
+
+if ($conn->connect_error) { // Verifica se houve erro na conexão
+    die("Falha na conexão: " . $conn->connect_error); // Exibe a mensagem de erro e encerra o script
+}
+
+$sql = "SELECT * FROM tbl_cao WHERE adocao = TRUE"; // Consulta SQL para buscar cães adotados
+$result = $conn->query($sql); // Executa a consulta SQL
+
+if ($result->num_rows > 0) { // Verifica se foram encontrados resultados
+    while ($row = $result->fetch_assoc()) { // Loop para percorrer os resultados
+        echo "<div class='cao'>";
+        echo "<h2>" . $row["nome"] . "</h2>"; // Exibe o nome do cão
+        echo "<img src='" . $row["imagem"] . "' width='200'><br>"; // Exibe a imagem do cão
+        echo "<p>Raça: " . $row["raca"] . "</p>"; // Exibe a raça do cão
+        echo "<p>Idade: " . $row["idade"] . "</p>"; // Exibe a idade do cão
+        echo "<p>Descrição: " . $row["descricao"] . "</p>"; // Exibe a descrição do cão
+        echo "</div>";
+    }
+} else {
+    echo "<p>Nenhum cão foi adotado ainda.</p>"; // Mensagem se nenhum cão foi adotado
+}
+
+$conn->close(); // Fecha a conexão com o banco de dados
+?>
+
+<a href="inicio.php">Voltar para Início</a>
+
+</body>
+</html>
