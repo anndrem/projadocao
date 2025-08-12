@@ -30,8 +30,9 @@
                 <h3>ADOTANTES</h3>
                 <ul>
                     <li><a href="form_adotante.php">Cadastrar adotante</a><br><br>
+                    <li><a href="form_adotante.php">Cadastrar adotante</a><br><br>
                     <li><a href="listar_adotante.php">Listar adotantes</a><br><br>
-                    <li><a href="buscar_adotante.php">Buscar adotante</a><br><br>
+                    <li><a href="#">Sobre nós</a><br><br>
                 </ul>
             </div>
         </div>
