@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/styleExcluir.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Visualizar e Excluir Cão</title>
@@ -39,9 +39,9 @@ if (isset($_GET["id"])) {
             $stmt_excluir->bind_param("i", $id);
 
             if ($stmt_excluir->execute()) {
-                echo "<p>Cão excluído com sucesso.</p>";
+                echo "<div class='erros'><p>Cão excluído com sucesso.</p></div>";
             } else {
-                echo "<p>Erro ao excluir cão: " . $stmt_excluir->error . "</p>";
+                echo "<div class='erros'><p>Erro ao excluir cão: </div>" . $stmt_excluir->error . "</p>";
             }
 
             $stmt_excluir->close();
@@ -55,23 +55,34 @@ if (isset($_GET["id"])) {
         $stmt->execute();
         $result = $stmt->get_result();
 
+        echo "<div class='container'>";
         // Verificação se o cão foi encontrado
         if ($result->num_rows > 0) {
             // Exibição das informações do cão em um bloco div
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='cao'>";
+                echo "<div class='titulo'>";
                 echo "<h2>" . $row["nome"] . "</h2>";
+                echo "</div>";
+
                 echo "<img src='" . $row["imagem"] . "' width='200'><br>";
+
+                echo "<div class='info'>";
                 echo "<p>Raça: " . $row["raca"] . "</p>";
                 echo "<p>Idade: " . $row["idade"] . "</p>";
                 echo "<p>Descrição: " . $row["descricao"] . "</p>";
+                echo "</div>";
+
+                echo "<div class='desc'>";
                 echo "<a href='visualizarexcluir_cao.php?id=" . $row["id"] . "&excluir=1'>Excluir Cão</a>";
+                echo "</div>";
+                
                 echo "</div>";
             }
         } else {
-            echo "<p>Cão não encontrado.</p>";
+            echo "<div class='erros'><p>Cão não encontrado.</p></div>";
         }
-
+        echo "</div>";
         // Fechamento da declaração preparada
         $stmt->close();
     }
@@ -83,7 +94,9 @@ if (isset($_GET["id"])) {
 $conn->close();
 ?>
 
+<div class="botoes">
 <a href="listar_cao.php">Voltar para Início</a>
+</div>
 
 </body>
 </html>

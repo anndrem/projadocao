@@ -6,7 +6,7 @@
 
 
     $conn = new mysqli($servername, $usuario, $senha, $dbname);
-
+    print('hellow');
 
 
     if ($conn->connect_error) {

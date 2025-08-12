@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    background-image: linear-gradient(150deg,rgb(1, 1, 72),rgb(39, 39, 204),blue);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+        h1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 50px;
+        border-right: 4px solid;
+        width: 13ch;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing ease 3s steps(13) infinite,
+        blinking 0.5s infinite step-end alternate;
+        }
+}
+    
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
+    flex-direction: row;
+    margin: 30px;
+}
+.cao{
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px black;
+.nome{
+        background-color: white;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(1, 1, 72);
+        }
+    }    
+    img{
+        border: 2px solid white;
+        height: 300px;
+        width: 400px;
+    }
+    .info{
+        margin: 0 0 20px 0;
+        height: 100%;
+        max-width: 80%;
+        p{
+       padding-top: 10px;
+       padding-bottom: 10px; 
+       border-bottom: 3px solid white;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        }
+    }
+}
+.botoes{
+padding-top: 80px;
+padding-bottom: 40px;
+    a{
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        transition: 0.5s ease;
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    a:hover{
+        background-color: white;
+        color: rgb(1, 1, 72);
+        box-shadow: 10px 10px 10px;
+    }
+}   

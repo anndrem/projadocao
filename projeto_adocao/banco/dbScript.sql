@@ -16,4 +16,16 @@ MODIFY COLUMN adocao TINYINT(1) NOT NULL DEFAULT 0;
 
 UPDATE tbl_cao SET adocao = 0 WHERE adocao IS NULL;
 
-SELECT * FROM tbl_cao WHERE adocao = FALSE;
+SELECT * FROM tbl_cao WHERE adocao = 0;
+
+CREATE TABLE tbl_adotantes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  email VARCHAR(100),
+  telefone VARCHAR(20),
+  contato TEXT,
+  experiencia TEXT,
+  residencia TEXT,
+  foto_adotante VARCHAR(255),
+  foto_residencia VARCHAR(255)
+);
