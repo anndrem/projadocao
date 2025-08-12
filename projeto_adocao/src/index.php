@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Sistema de Adoção</title>
 </head>
+
 <body>
-    <h1>Cadastrar cão</h1>
-    <form action="salvarcao.php" method="post" enctype="multipart/form-data">
-        <label for="nome">Nome:</label><br>
-        <input type="text" name="nome"><br><br>
-        <label for="raca">Raça:</label><br>
-        <input type="text" name="raca"><br><br>
-        <label for="idade">Idade:</label><br>
-        <input type="number" name="idade"><br><br>
-        <label for="descricao">Descrição:</label><br>
-        <textarea name="descricao"></textarea><br><br>
-        <label for="imagem">Imagem:</label><br>
-        <input type="file" name="imagem"><br><br>
-        <input type="submit" value="Cadastrar"><br><br>
-    </form>
-    <br><a href="inicio.php">Voltar para o início</a>
+    <header>
+        <img src="imgs/logo.png">
+        <h2 class="nomes">André de Almeida e Lucas Morais</h2>
+        <h1>Bem-vindo ao Sistema de adoção de cães
+            <br>
+        </h1>
+    </header>
+        <div class="container">
+            <div class="container_cao">
+                <h3>CÃES</h3>
+                <ul>
+                    <li><a href="cadastrarcao.php">Cadastrar novo cão</a><br><br>
+                    <li><a href="listar_cao.php">Listar Cães Disponíveis</a><br><br>
+                    <li><a href="listar_adotados.php">Listar Cães Adotados</a><br><br>
+                    <li><a href="buscar_caes.php">Buscar Cães</a><br><br>
+                </ul>
+            </div>
+            <div class="container_adotantes">
+                <h3>ADOTANTES</h3>
+                <ul>
+                    <li><a href="form_adotante.php">Cadastrar adotante</a><br><br>
+                    <li><a href="listar_adotante.php">Listar adotantes</a><br><br>
+                    <li><a href="buscar_adotante.php">Buscar adotante</a><br><br>
+                </ul>
+            </div>
+        </div>
+    </container>
+
 </body>
+
 </html>

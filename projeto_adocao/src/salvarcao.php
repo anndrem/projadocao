@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Salvar Cão</title>
+    <link rel="stylesheet" href="styles/styleSalvar.css">
 </head>
 <body>
     <h1>Cadastrar Cão</h1>
@@ -36,14 +37,17 @@ $allowed_types = ["image/jpeg", "image/jpg", "image/png"];
 $max_size = 2 * 1024 * 1024;
 
 if (!in_array($imagem["type"], $allowed_types)) {
-    echo "Tipo de imagem não permitido. Apenas JPEG, JPG e PNG são permitidos.";
+    echo "<div class='erros'>Tipo de imagem não permitido. Apenas JPEG, JPG e PNG são permitidos.</div>";
+    echo"<a href='cadastrarcao.php'>Voltar para o Início</a>";
     exit;
 }
 
 if ($imagem["size"] > $max_size) {
-    echo "O tamanho da imagem é muito grande. O tamanho máximo permitido é 2MB.";
+    echo "<div class='erros'>O tamanho da imagem é muito grande. O tamanho máximo permitido é 2MB.</div>";
+    echo"<a href='cadastrarcao.php'>Voltar para o Início</a>";
     exit;
 }
+
 
 // Criação do diretório "imgs" se ele não existir
 if (!file_exists("imgs")) {
@@ -82,9 +86,9 @@ $stmt->bind_param("ssiss", $nome, $raca, $idade, $descricao, $caminho_imagem);
 
 // Execução da consulta
 if ($stmt->execute()) {
-    echo "Cão cadastrado com sucesso!";
+    echo "<div class='sucesso'>Cão cadastrado com sucesso!</div>";
 } else {
-    echo "Erro ao cadastrar cão: " . $stmt->error;
+    echo "<div class='erros'>Erro ao cadastrar cão: </div>" . $stmt->error;
 }
 
 // Fechamento da declaração preparada
@@ -94,6 +98,6 @@ $stmt->close();
 }
 $conn->close();
 ?>
-<br><a href="index.php">Voltar para o Início</a>
+<br><a href="cadastrarcao.php">Voltar para o Início</a>
 </body>
 </html>

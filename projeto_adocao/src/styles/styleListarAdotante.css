@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    background-image: linear-gradient(150deg,rgb(1, 1, 72),rgb(39, 39, 204),blue);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+        h1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 50px;
+        border-right: 4px solid;
+        width: 19ch;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(19) infinite,
+        blinking 0.5s infinite step-end alternate;
+        }
+}
+    
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+.container{
+    justify-content: center;
+    gap: 120px;
+    padding: 20px;
+    width: 1300px;
+    .junto{
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+        .nome{
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        font-size: 22px;
+            h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(1, 1, 72);
+            }
+        } 
+        .adotante{
+        border-right: 1px solid white;
+        border-radius: 0px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 85%;
+        flex: 2;
+        .info{
+            height: 100%;
+            max-width: 80%;
+            padding-top: 10px;
+            p{
+            padding-top: 20px;
+            padding-bottom: 10px; 
+            border-bottom: 3px solid white;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            }
+        }
+}
+        .imgs{
+        height: 85%;
+        width: 48%;
+        height: auto;
+        object-fit: cover;
+        border-left: 1px solid white;
+        img{
+            padding-top: 20px;
+            max-width: 48%;
+            min-width: 48%;
+            max-height: 85%;
+            max-height: 85%;
+        }
+    }
+    }
+
+}
+.botoes{
+padding-top: 80px;
+padding-bottom: 40px;
+    a{
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        transition: 0.5s ease;
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    a:hover{
+        background-color: white;
+        color: rgb(1, 1, 72);
+        box-shadow: 10px 10px 10px;
+    }
+}   

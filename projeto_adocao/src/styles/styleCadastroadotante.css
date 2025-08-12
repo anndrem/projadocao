@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+body{
+    background-image: linear-gradient(150deg,rgb(1, 1, 72),rgb(39, 39, 204),blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0;
+    margin: 0;
+}
+.header{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(37, 37, 37);
+    margin-bottom: 40px;
+}
+label{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 114);
+}
+.campos{
+    width: 310px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 114);
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+textarea{
+    width: 310px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid rgb(0, 0, 114);
+    border-radius: 5px;
+    font-size: 20px;
+    max-width: 310px;
+    min-width: 310px;
+    max-height: 70px;
+    min-height: 30px;
+}
+.imagem{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(1, 1, 136);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.botao{
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 1, 136);
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 99px;
+    transition: 0.5s;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+.botao:hover{
+    background-color: white;
+    color: rgb(0, 0, 136);
+    box-shadow: 5px 5px 10px;
+}
+a{
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s ease;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a:hover{
+    background-color: white;
+    color: rgb(1, 1, 72);
+    box-shadow: 5px 5px 10px black;
+}   
