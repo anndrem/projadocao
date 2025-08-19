@@ -57,7 +57,7 @@ $conn->close(); // Fecha a conexão com o banco de dados
 ?>
 <div class="botoes">
 <a href="listar_cao.php">Voltar para a lista</a><br>
-<a href="index.php">Voltar para Início</a>
+<a href="pag_user.php">Voltar para Início</a>
 </div>
 </body>
 </html>

@@ -40,7 +40,7 @@
     </div>
 
 <div class="botoes">
-<a href="index.php">Voltar para Início</a>
+<a href="pag_user.php">Voltar para Início</a>
 </div>
 
 <script>
