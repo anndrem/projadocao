@@ -1,11 +1,12 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
-body{
-    background-image: linear-gradient(150deg,rgb(1, 1, 72),rgb(39, 39, 204),blue);
+
+body {
+    background-image: linear-gradient(150deg, rgb(1, 1, 72), rgb(39, 39, 204), blue);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,44 +15,57 @@ body{
     padding-top: 0;
     margin: 0;
 }
-.header{
+
+.header {
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.container{
+
+.container {
     border: 2px solid white;
     border-radius: 5px;
     background-color: white;
     box-shadow: 5px 5px 10px rgb(37, 37, 37);
+
+    .back_btn {
+        text-decoration: none;
+        color: black;
+        animation: none;
+    }
 }
-.forms{
+
+
+.forms {
     .contaier_campos {
         display: flex;
         flex-direction: column;
         gap: 1.4rem;
     }
 }
-label{
+
+label {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(0, 0, 114);
 }
-.campos{
+
+.campos {
     width: 310px;
     height: 30px;
     border-radius: 5px;
     color: black;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 20px; 
+    padding: 20px;
 
     &.b {
         border: none
     }
 }
-.textarea{
+
+.textarea {
     width: 310px;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -63,16 +77,18 @@ label{
     max-height: 70px;
     min-height: 30px;
 
-    
+
 }
-.imagem{
+
+.imagem {
     text-decoration: none;
     border-radius: 5px;
     background-color: transparent;
     color: rgb(1, 1, 136);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.botao{
+
+.botao {
     align-items: center;
     justify-content: center;
     background-color: rgb(1, 1, 136);
@@ -84,14 +100,16 @@ label{
     transition: 0.5s;
     font-size: 20px;
     cursor: pointer;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.botao:hover{
+
+.botao:hover {
     background-color: white;
     color: rgb(0, 0, 136);
     box-shadow: 5px 5px 10px;
 }
-a{
+
+a {
     text-decoration: none;
     border: 2px solid white;
     border-radius: 5px;
@@ -100,8 +118,13 @@ a{
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-a:hover{
+
+a:hover {
     background-color: white;
     color: rgb(1, 1, 72);
     box-shadow: 5px 5px 10px black;
-}   
+}
+
+.eye_btn {
+    color: black;
+}

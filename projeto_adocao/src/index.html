@@ -10,6 +10,7 @@
 
 <body>
     <div class="header">
+        <a class="back_btn" href="pag_user.php">back</a>
         <h1>Cadastre-se</h1>
     </div>
     <div class="container">
@@ -25,10 +26,12 @@
                 </div>
                 <div class="campos">
                     <label for="senha">Digite sua senha:</label>
-                    <input class="textarea" type="password">
+                    <button type="button" class="eye_btn">eye</button>
+                    <input class="textarea senha" type="password">
                 </div>
                 <div class="campos">
                     <label for="confsenha">Confirmar Senha:</label>
+                    <button type="button" class="eye_btn">eye</button>
                     <input class="textarea senha" type="password">
                 </div>
                 <div class="campos b">
@@ -36,20 +39,25 @@
                 </div>
             </div>
         </form>
-        <button class="olho">aaa</button>
     </div>
 </body>
 
 <script>
-    const bnt = document.querySelector('.olho')
-    let txt = document.querySelector('.senha')
-    btn.addEventListener('click', () => {
-        if (txt.inputElement.type == 'password') {
-            txt.type = 'text'
-        } else {
-            txt.type = 'password'
-        }
-    })
+    const btn = document.querySelectorAll('.eye_btn')
+    let txt = document.querySelectorAll('.senha');
+
+    txt.forEach((txt) => {
+        btn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (txt.type == 'password') {
+                    txt.type = 'text'
+                } else {
+                    txt.type = 'password'
+                }
+            })
+        })
+    });
+
 </script>
 
 </html>

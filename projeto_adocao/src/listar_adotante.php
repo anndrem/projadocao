@@ -8,8 +8,7 @@
 </head>
 <body>
 <?php
-$conn = new mysqli("localhost", "root", "", "adocao_luan");
-$result = $conn->query("SELECT * FROM tbl_adotantes");
+require "conexao.php";
 
 echo "<div class='titulo'>";
 echo "<h1>Lista de Adotantes</h1>";

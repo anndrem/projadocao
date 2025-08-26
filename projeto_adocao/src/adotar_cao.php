@@ -9,16 +9,7 @@
 <body>
     <h1>Cães para adoção</h1>
     <?php
-    $servername = "localhost"; //Endereço do servidor mysql
-    $usuario = "root"; //nome de usuario do mysql
-    $senha = "usbw"; //senha do mysql
-    $dbname = "adocao_luan"; //nome do banco de dados
-
-    $conn = new mysqli("localhost", "root", "", "adocao_luan"); // cria uma nova conexao com banco de dados
-
-    if ($conn->connect_error) { //verifica se houve erro na conexao
-        die("Falha na conexao: " . $conn->connect_error); // exibe mensagem de erro e encerra o script
-    }
+    require "conexao.php";
 
     $id = $_GET["id"]; //obtem o id do cao da query string
 

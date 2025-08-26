@@ -10,18 +10,7 @@
 
 <?php
 // Dados da conexão com o banco de dados
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "adocao_luan";
-
-// Criar conexão com o banco de dados MySQL
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Verifica a conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+require "conexao.php";
 
 // Dados do formulário
 $nome = $_POST["nome"];

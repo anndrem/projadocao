@@ -18,18 +18,7 @@
 
 <?php
 // Conexão com o banco de dados
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "adocao_luan";
-
-// Criar conexão com o banco de dados
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+require "conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST["nome"])) {

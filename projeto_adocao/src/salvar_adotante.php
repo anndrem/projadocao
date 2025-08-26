@@ -4,8 +4,7 @@
     <link rel="stylesheet" href="styles/styleSalvaradotante.css">
 </head>
 <?php
-$conn = new mysqli("localhost", "root", "", "adocao_luan");
-if ($conn->connect_error) die("Erro: " . $conn->connect_error);
+require "conexao.php";
 
 // Upload de imagens
 $foto1 = $_FILES["foto_adotante"]["name"];
