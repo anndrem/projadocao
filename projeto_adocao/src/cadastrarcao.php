@@ -26,7 +26,10 @@
 
         <label for="imagem">Foto do cão:</label><br>
         <input class="imagem" type="file" name="imagem"><br><br>
-        
+    
+        <label for="imagem">Galeria</label><br>
+        <input class="imagem" type="file" name="fotos[]"><br><br>
+
         <input class="botao" type="submit" value="Cadastrar"><br><br>
     </form>
     </div>
