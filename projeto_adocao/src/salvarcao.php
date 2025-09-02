@@ -10,21 +10,9 @@
 <body>
     <h1>Cadastrar Cão</h1>
 
-<<<<<<< HEAD
-    <?php
-    // Dados da conexão com o banco de dados
-
-    use Soap\Url;
-
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $dbname = "adocao_luan";
-=======
 <?php
 // Dados da conexão com o banco de dados
 require "conexao.php";
->>>>>>> 376fe731baf56e67ba33636929bb20125fa38158
 
     // Criar conexão com o banco de dados MySQL
     $conn = new mysqli($host, $user, $pass, $dbname);
@@ -122,6 +110,7 @@ require "conexao.php";
                 echo "Cão cadastrado, mas nenhuma imagem adicional foi enviada.";
             }
         } else {
+
             echo "<div class='erros'>Erro ao cadastrar cão: </div>" . $stmt->error;
         }
     } else {
