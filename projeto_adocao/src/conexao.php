@@ -1,20 +1,19 @@
 <?php
-    $servername = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname= "adocao_Luan";
+$str = [
+    "servername" => "localhost",
+    "usuario" => "root",
+    "senha" => "",
+    "dbname" => "adocao_Luan"
+];
 
 
-    $conn = new mysqli($servername, $usuario, $senha, $dbname);
-    print('hellow');
+$conn = new mysqli($str['servername'], $str['usuario'], $str['senha'], $str['dbname']);
 
 
-    if ($conn->connect_error) {
+if ($conn->connect_error) {
 
-        die("Falha na conexão: " . $conn->connect_error);
-    } 
-    // else {
-    //     header("./index.html", true, 01);
-    // }
-
-?>
+    die("Falha na conexão: " . $conn->connect_error);
+}
+// else {
+//     header("./index.html", true, 01);
+// }

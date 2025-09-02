@@ -9,17 +9,7 @@
 <h1>Detalhes do Cão</h1>
 
 <?php
-$servidor = "localhost"; // Endereço do servidor MySQL
-$usuario = "root"; // Nome de usuário do MySQL
-$senha = ""; // Senha do MySQL
-$banco = "adocao_luan"; // Nome do banco de dados
-
-$conn = new mysqli($servidor, $usuario, $senha, $banco); // Cria uma nova conexão com o banco de dados
-
-if ($conn->connect_error) { // Verifica se houve erro na conexão
-    die("Falha na conexão: " . $conn->connect_error); // Exibe a mensagem de erro e encerra o script
-}
-
+require "conexao.php";
 $id = $_GET["id"]; // Obtém o ID do cão da query string
 
 $sql = "SELECT * FROM tbl_cao WHERE id = $id"; // Consulta SQL para buscar o cão pelo ID
@@ -57,7 +47,7 @@ $conn->close(); // Fecha a conexão com o banco de dados
 ?>
 <div class="botoes">
 <a href="listar_cao.php">Voltar para a lista</a><br>
-<a href="index.php">Voltar para Início</a>
+<a href="pag_user.php">Voltar para Início</a>
 </div>
 </body>
 </html>

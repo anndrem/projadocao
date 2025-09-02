@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Sistema de Adoção</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="back_btn" href="pag_user.php">back</a>
+        <h1>Cadastre-se</h1>
+    </div>
+    <div class="container">
+        <form class="forms" action="salvarcao.php" method="post" enctype="multipart/form-data">
+            <div class="contaier_campos">
+                <div class="campos">
+                    <label for="nome">Nome:</label>
+                    <input class="textarea" type="text" name="nome" placeholder="Lucas">
+                </div>
+                <div class="campos">
+                    <label for="email">Email:</label>
+                    <input class="textarea" type="text" name="raca" placeholder="lucas@gmail.com">
+                </div>
+                <div class="campos">
+                    <label for="senha">Digite sua senha:</label>
+                    <button type="button" class="eye_btn">eye</button>
+                    <input class="textarea senha" type="password">
+                </div>
+                <div class="campos">
+                    <label for="confsenha">Confirmar Senha:</label>
+                    <button type="button" class="eye_btn">eye</button>
+                    <input class="textarea senha" type="password">
+                </div>
+                <div class="campos b">
+                    <input class="botao" type="submit" value="Cadastrar">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    const btn = document.querySelectorAll('.eye_btn')
+    let txt = document.querySelectorAll('.senha');
+
+    txt.forEach((txt) => {
+        btn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (txt.type == 'password') {
+                    txt.type = 'text'
+                } else {
+                    txt.type = 'password'
+                }
+            })
+        })
+    });
+
+</script>
+
+</html>

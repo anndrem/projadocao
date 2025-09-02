@@ -18,18 +18,7 @@
 
 <?php
 // Conexão com o banco de dados
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "adocao_luan";
-
-// Criar conexão com o banco de dados
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+require "conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST["nome"])) {
@@ -91,6 +80,6 @@ echo "<div class='espaco'></div>";
 $conn->close(); // Fecha a conexão com o banco de dados
 ?>
 
-<div class="botoes"><a href="index.php">Voltar para o início</a></div>
+<div class="botoes"><a href="pag_user.php">Voltar para o início</a></div>
 </body>
 </html>

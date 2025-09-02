@@ -13,20 +13,7 @@
 
 <?php
 // Definição das credenciais de conexão com o banco de dados
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "adocao_luan";
-
-// Criação de uma nova conexão com o banco de dados MySQL
-$conn = new mysqli($servidor, $usuario, $senha, $banco);
-
-// Verificação de erro na conexão com o banco de dados
-if ($conn->connect_error) {
-    // Exibição de mensagem de erro e encerramento do script
-    die("Falha na conexão: " . $conn->connect_error);
-}
-
+require "conexao.php";
 // Consulta SQL para buscar todos os cães não adotados
 $sql = "SELECT * FROM tbl_cao WHERE adocao = 0";
 
@@ -76,6 +63,6 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 <br><br>
-<a href="index.php">Voltar para Início</a>
+<a href="pag_user.php">Voltar para Início</a>
 </body>
 </html>

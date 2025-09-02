@@ -33,6 +33,6 @@
         <input class="botao" type="submit" value="Cadastrar"><br><br>
     </form>
     </div>
-    <br><a href="index.php">Voltar para o início</a>
+    <br><a href="pag_user.php">Voltar para o início</a>
 </body>
 </html>

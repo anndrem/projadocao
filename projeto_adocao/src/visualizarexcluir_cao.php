@@ -11,19 +11,7 @@
 <h1>Visualizar e Excluir Cão</h1>
 
 <?php
-// Definição das credenciais de conexão com o banco de dados
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "adocao_luan";
-
-// Criação de uma nova conexão com o banco de dados MySQL
-$conn = new mysqli($servidor, $usuario, $senha, $banco);
-
-// Verificação de erro na conexão com o banco de dados
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
+require "conexao.php";
 
 // Verificação se o ID do cão foi fornecido na query string
 if (isset($_GET["id"])) {
