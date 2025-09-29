@@ -28,11 +28,11 @@
         <input class="imagem" type="file" name="imagem"><br><br>
     
         <label for="imagem">Galeria</label><br>
-        <input class="imagem" type="file" name="fotos[]"><br><br>
+        <input class="imagem" type="file" name="fotos[]" multiple><br><br>
 
         <input class="botao" type="submit" value="Cadastrar"><br><br>
     </form>
     </div>
-    <br><a href="pag_user.php">Voltar para o início</a>
+    <br><a href="index.php">Voltar para o início</a>
 </body>
 </html>

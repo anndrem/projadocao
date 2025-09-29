@@ -24,6 +24,6 @@
     echo "</div>";
     $conn->close(); //fecha a conexao com o banco de dados
     ?>
-    <br><a href="pag_user.php">Voltar para o Início</a>
+    <br><a href="index.php">Voltar para o Início</a>
 </body>
 </html>

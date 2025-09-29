@@ -14,14 +14,6 @@
 // Dados da conexão com o banco de dados
 require "conexao.php";
 
-    // Criar conexão com o banco de dados MySQL
-    $conn = new mysqli($host, $user, $pass, $dbname);
-
-    // Verifica a conexão
-    if ($conn->connect_error) {
-        die("Conexão falhou: " . $conn->connect_error);
-    }
-
     // Dados do formulário
     $nome = $_POST["nome"];
     $raca = $_POST["raca"];

@@ -80,6 +80,6 @@ echo "<div class='espaco'></div>";
 $conn->close(); // Fecha a conexão com o banco de dados
 ?>
 
-<div class="botoes"><a href="pag_user.php">Voltar para o início</a></div>
+<div class="botoes"><a href="index.php">Voltar para o início</a></div>
 </body>
 </html>
